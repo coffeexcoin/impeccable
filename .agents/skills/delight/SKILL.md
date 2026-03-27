@@ -227,16 +227,6 @@ Add personality and joy through these methods:
 - Randomized variations (not same every time)
 - Progressive reveals with continued use
 
-### Chat & AI Interaction Patterns
-
-If the interface is conversational or AI-powered, these timings create a responsive, alive feel:
-
-- **Typing indicator**: Show after ~800ms of no response. Animate dots with opacity pulse (0.3→1.0→0.3, staggered 150ms per dot). Occupy message-bubble space so content doesn't shift when the real message arrives.
-- **Message appearance**: Own messages: `scale(0.95)→scale(1)` + `translateY(8px→0)` in 150ms. Received messages: fade-in 200ms. Batched messages: 50ms stagger between each.
-- **Scroll-to-bottom**: Button tap → 300ms smooth scroll. Auto-scroll on new incoming message → 100ms. If user has scrolled up to read history, do NOT auto-scroll — show a "new messages" indicator instead.
-- **History (scroll-up)**: No animation — render instantly. Users scrolling through history want speed, not choreography.
-- **Feedback latency**: Visual response to any user action within 100ms, even if the actual result is async (optimistic UI, loading shimmer, or button state change).
-
 ### Loading & Waiting States
 
 **Make waiting engaging**:
