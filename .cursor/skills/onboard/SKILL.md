@@ -219,6 +219,29 @@ localStorage.setItem('feature-tooltip-seen-reports', 'true');
 
 **IMPORTANT**: Don't show same onboarding twice (annoying). Track completion and respect dismissals.
 
+### AI & Conversational Product Onboarding
+
+For chat interfaces, AI assistants, and conversational products, onboarding works differently:
+
+**The first message IS the onboarding.** Don't build a separate walkthrough — the agent's initial message should demonstrate capability, set expectations, and invite interaction. 2-3 sentences max, ending with an invitation or question.
+
+**Benchmarks:**
+- **Time to first interaction**: Under 30 seconds from landing to first user input
+- **Signup fields**: Every required field costs 10-15% of potential users — minimize ruthlessly
+- **First upsell**: Not before session 3 — let users experience value first
+
+**Patterns:**
+- **Suggestion chips**: 4-6 tappable prompts sampling the capability range (not just "Hello"). Show users what's possible without making them think of a prompt from scratch
+- **OAuth-first**: Social login as primary CTA — lowest friction path to first interaction
+- **Loading as personality**: Use loading/thinking states to reveal the product's character (custom animations, contextual messages) instead of generic spinners
+- **Mobile-first**: Design for 375px with the keyboard covering the bottom third of the screen — this is the most common first-interaction context
+
+**Anti-patterns:**
+- Mandatory walkthrough before first interaction (kills activation rates)
+- Feature dump ("I can do X, Y, Z, A, B, C...") — show, don't list
+- Generic welcome ("How can I help you today?") — be specific to your product's domain
+- Blocking the input field during onboarding steps
+
 **NEVER**:
 - Force users through long onboarding before they can use product
 - Patronize users with obvious explanations
